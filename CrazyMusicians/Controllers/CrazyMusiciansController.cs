@@ -72,7 +72,7 @@ namespace CrazyMusicians.Controllers
             return NoContent();
         }
         [HttpDelete("{id}")]
-        public ActionResult Delete(int id)
+        public IActionResult Delete(int id)
         {
             var musician = musicians.FirstOrDefault(m => m.Id == id);
             if (musician == null)
